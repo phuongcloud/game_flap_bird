@@ -66,14 +66,14 @@ screen = pygame.display.set_mode((216,384))
 clock = pygame.time.Clock()
 game_font = pygame.font.Font('04B_19.ttf',20)
 # chen backgroud
-bg = pygame.image.load('assets/background-night.png')
+bg = pygame.image.load('background-night.png')
 # chen san
-floor = pygame.image.load('assets/floor.png')
+floor = pygame.image.load('floor.png')
 floor_x_pos = 0
 # tao chim
-bird_down = pygame.image.load('assets/yellowbird-downflap.png').convert_alpha()
-bird_mid = pygame.image.load('assets/yellowbird-midflap.png').convert_alpha()
-bird_up = pygame.image.load('assets/yellowbird-upflap.png').convert_alpha()
+bird_down = pygame.image.load('yellowbird-downflap.png').convert_alpha()
+bird_mid = pygame.image.load('yellowbird-midflap.png').convert_alpha()
+bird_up = pygame.image.load('yellowbird-upflap.png').convert_alpha()
 bird_list = [bird_down,bird_mid,bird_up]
 bird_index = 0
 bird = bird_list[bird_index]
@@ -82,18 +82,18 @@ bird_rect = bird.get_rect(center = (50,192))
 birdflap = pygame.USEREVENT + 1
 pygame.time.set_timer(birdflap, 200)
 # tao ong
-pipe_surface = pygame.image.load("assets/pipe-green.png")
+pipe_surface = pygame.image.load("pipe-green.png")
 pipe_list = []
 # tao timer
 spawnpipe = pygame.USEREVENT
 pygame.time.set_timer(spawnpipe, 1200)
 pipe_height = [100,125,150]
-game_over_surface = pygame.image.load('assets/message.png').convert_alpha()
+game_over_surface = pygame.image.load('message.png').convert_alpha()
 game_over_rect = game_over_surface.get_rect(center=(108,192))
 #chen am thanh
-flap_sound = pygame.mixer.Sound('sound/sfx_wing.wav')
-hit_sound = pygame.mixer.Sound('sound/sfx_hit.wav')
-score_sound = pygame.mixer.Sound('sound/sfx_point.wav')
+flap_sound = pygame.mixer.Sound('sfx_wing.wav')
+hit_sound = pygame.mixer.Sound('sfx_hit.wav')
+score_sound = pygame.mixer.Sound('sfx_point.wav')
 score_sound_countdown = 100
 while True:
     # vong lap giao dien game 
